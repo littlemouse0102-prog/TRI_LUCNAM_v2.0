@@ -1,0 +1,16 @@
+/* 10. Teal Mint */
+:root {
+    --primary: #115e59;
+    --primary-hover: #0f766e;
+    --primary-light: #f0fdfa;
+    --secondary: #0d9488;
+    --dark: #042f2e;
+    --light: #f4fbfb;
+    --white: #ffffff;
+    --border: #99f6e4;
+    --text-main: #134e4a;
+    --text-muted: #14b8a6;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --warning: #d97706;
+}

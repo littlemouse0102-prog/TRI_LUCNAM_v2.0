@@ -1,0 +1,16 @@
+/* 19. Dracula Dark */
+:root {
+    --primary: #44475a;
+    --primary-hover: #6272a4;
+    --primary-light: #282a36;
+    --secondary: #bd93f9;
+    --dark: #1e1f29;
+    --light: #21222c;
+    --white: #282a36;
+    --border: #44475a;
+    --text-main: #f8f8f2;
+    --text-muted: #6272a4;
+    --danger: #ff5555;
+    --danger-bg: #3a2228;
+    --warning: #ffb86c;
+}

@@ -1,0 +1,16 @@
+/* 16. Purple Royal */
+:root {
+    --primary: #581c87;
+    --primary-hover: #6b21a8;
+    --primary-light: #faf5ff;
+    --secondary: #7e22ce;
+    --dark: #3b0764;
+    --light: #fbf8ff;
+    --white: #ffffff;
+    --border: #e9d5ff;
+    --text-main: #4c1d95;
+    --text-muted: #a855f7;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --warning: #d97706;
+}

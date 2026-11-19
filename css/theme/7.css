@@ -1,0 +1,16 @@
+/* 7. Amber Warmth */
+:root {
+    --primary: #78350f;
+    --primary-hover: #92400e;
+    --primary-light: #fef3c7;
+    --secondary: #b45309;
+    --dark: #451a03;
+    --light: #fffbeb;
+    --white: #ffffff;
+    --border: #fde68a;
+    --text-main: #78350f;
+    --text-muted: #d97706;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --warning: #b45309;
+}

@@ -1,0 +1,330 @@
+/**
+ * TRIATHLON LỤC NAM - CHALLENGE MODULE CSS
+ * Tương thích hoàn toàn với member.css và biến hệ thống :root
+ */
+
+/* --- Container & Nội dung trang Thử thách --- */
+.challenge-page-content {
+    padding: 16px;
+}
+
+/* --- Banner Thử Thách & Card Thử Thách --- */
+.challenge-banner-card {
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: var(--card-shadow);
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.challenge-banner-img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Thẻ card danh sách thử thách (Trang chủ/Danh sách) */
+.challenge-item-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 16px;
+    transition: transform 0.2s ease;
+}
+
+.challenge-item-card:hover {
+    transform: translateY(-2px);
+}
+
+.challenge-card-body {
+    padding: 16px;
+}
+
+.challenge-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    background: var(--background);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+}
+
+.challenge-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.challenge-card-time {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Thẻ Thông tin Đăng ký (Chi tiết) --- */
+.registration-status-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.registration-status-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.reg-info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--background);
+}
+
+.participants-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count-participant {
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.avatar-group-overlap {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-group-overlap img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    object-fit: cover;
+    margin-left: -8px;
+}
+
+.avatar-group-overlap img:first-child {
+    margin-left: 0;
+}
+
+/* --- Hệ thống Sub-Tab Chi Tiết (Thông tin, Quy định, BXH...) --- */
+.sub-tab-navigation {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+.sub-tab-navigation::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
+}
+
+.sub-tab-btn {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.sub-tab-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+.sub-tab-content {
+    display: none;
+}
+
+.sub-tab-content.active {
+    display: block;
+}
+
+/* --- Bảng Xếp Hạng & Bộ Lọc Kiểu 84RACE --- */
+.ranking-filter-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ranking-filter-bar input, 
+.ranking-filter-bar select {
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    font-size: 13px;
+    background: var(--white);
+    color: var(--text-main);
+    outline: none;
+    box-shadow: var(--card-shadow);
+}
+
+.ranking-filter-bar input {
+    flex: 1;
+}
+
+.ranking-filter-bar input:focus,
+.ranking-filter-bar select:focus {
+    border-color: var(--primary);
+}
+
+.total-achievement-banner {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    background: var(--white);
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.total-achievement-banner b {
+    color: var(--primary);
+}
+
+/* Danh sách vận động viên trong BXH */
+.athlete-ranking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.athlete-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s;
+}
+
+.athlete-item:hover {
+    background-color: var(--light);
+}
+
+.athlete-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.rank-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-muted);
+    width: 24px;
+    text-align: center;
+}
+
+.rank-number.top-1 { color: #D97706; } /* Vàng đồng */
+.rank-number.top-2 { color: #64748B; } /* Bạc */
+.rank-number.top-3 { color: #B45309; } /* Đồng */
+
+.athlete-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--light);
+}
+
+.athlete-meta {
+    flex: 1;
+}
+
+.athlete-meta h4 {
+    font-size: 14px;
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.progress-bar-wrap {
+    width: 100%;
+    max-width: 140px;
+    height: 6px;
+    background: var(--background);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+.athlete-score {
+    text-align: right;
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.athlete-score b {
+    color: var(--primary);
+    font-size: 14px;
+    display: block;
+}
+
+/* --- Khối nội dung thông tin / quy định chi tiết --- */
+.challenge-info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 16px;
+}
+
+.challenge-info-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.challenge-info-card p, .challenge-info-card li {
+    font-size: 14px;
+    color: var(--text-main);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}

@@ -1,0 +1,16 @@
+/* 8. Cyan Tech */
+:root {
+    --primary: #155e75;
+    --primary-hover: #0e7490;
+    --primary-light: #ecfeff;
+    --secondary: #0891b2;
+    --dark: #083344;
+    --light: #f0fdfa;
+    --white: #ffffff;
+    --border: #a5f3fc;
+    --text-main: #164e63;
+    --text-muted: #06b6d4;
+    --danger: #e11d48;
+    --danger-bg: #fff1f2;
+    --warning: #d97706;
+}
