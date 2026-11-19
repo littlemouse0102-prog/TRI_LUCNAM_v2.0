@@ -1,1 +1,0 @@
-# TRI_LUCNAM_v2.0
