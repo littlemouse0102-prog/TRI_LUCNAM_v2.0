@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Triathlon Lục Nam</title>
+    
+    <!-- CẤU HÌNH LOGO CHO LỐI TẮT MÀN HÌNH CHÍNH & TRÌNH DUYỆT -->
+    <!-- Favicon chuẩn cho tab trình duyệt -->
+    <link rel="icon" type="image/png" href="avatars/TRILN.png">
+    
+    <!-- ĐÃ SỬA: Sửa 'iavatars' thành 'avatars' cho đúng thư mục -->
+   <!-- Cấu hình chuẩn cho ứng dụng màn hình chính -->
+    <link rel="apple-touch-icon" href="avatars/TRILN.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes"> <!-- Thêm dòng này để sửa cảnh báo -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Triathlon Lục Nam">
+
+    <!-- Liên kết tệp Manifest để thiết bị Android nhận diện Logo khi đưa ra màn hình chính -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Thư viện Font và Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Liên kết chuẩn đến tệp CSS Ngọc Trai trong thư mục css/ -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Các thẻ meta, font, css cũ của anh -->
+    <link rel="stylesheet" href="css/global.css">
+    
+    <!-- THẺ QUAN TRỌNG ĐỂ ĐỒNG BỘ MÀU -->
+    <link id="dynamic-theme-css" rel="stylesheet" href="">
+</head>
+<body>
+
+    <div class="login-container animate-fade-in">
+        <div class="logo-section">
+            <div class="logo-icon">
+                <i class="fa-solid fa-person-biking"></i>
+            </div>
+            <h1>TRIATHLON LỤC NAM</h1>
+        </div>
+
+        <div class="login-card">
+            <h2>Đăng Nhập Thành Viên</h2>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <!-- Giữ ID pinInput để tương thích tuyệt đối với tệp JS hệ thống -->
+                        <input type="password" id="pinInput" placeholder="Nhập mã PIN của bạn" maxlength="10" autocomplete="off" required>
+                    </div>
+                    <div id="errorMessage" class="error-message">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>Mã PIN không chính xác. Vui lòng thử lại!</span>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn-submit">
+                    <span class="btn-text">Vào Hệ Thống</span>
+                    <div class="spinner hidden"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gọi chuẩn đường dẫn tệp logic hệ thống -->
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        // Hàm thực thi chèn link CSS tương ứng vào thẻ <head>
+        function loadThemeCss(themeName) {
+            let themeLink = document.getElementById('dynamic-theme-css');
+            
+            if (!themeLink) {
+                themeLink = document.createElement('link');
+                themeLink.id = 'dynamic-theme-css';
+                themeLink.rel = 'stylesheet';
+                document.head.appendChild(themeLink);
+            }
+
+            if (themeName === 'default') {
+                themeLink.href = '';
+            } else {
+                themeLink.href = `css/theme/${themeName}.css`;
+            }
+        }
+
+        // Hàm thay đổi, lưu trữ và đồng bộ hóa cho toàn bộ các trang HTML khác
+        function setTheme(themeName) {
+            localStorage.setItem('app_theme', themeName);
+            loadThemeCss(themeName);
+            
+            const dropdown = document.getElementById('themeDropdown');
+            if (dropdown) dropdown.classList.remove('show');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Tự động nạp theme đã lưu cho mọi file HTML ngay khi mở lên
+            const savedTheme = localStorage.getItem('app_theme');
+            if (savedTheme) {
+                loadThemeCss(savedTheme);
+            }
+
+            // Xử lý bật/tắt menu chấm màu sổ xuống (nếu trang đó có nút đổi màu)
+            const themeBtn = document.getElementById('themeSwitcherBtn');
+            const themeDropdown = document.getElementById('themeDropdown');
+
+            if (themeBtn && themeDropdown) {
+                themeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    themeDropdown.classList.toggle('show');
+                });
+
+                document.addEventListener('click', () => {
+                    themeDropdown.classList.remove('show');
+                });
+                
+                themeDropdown.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

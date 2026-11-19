@@ -1,0 +1,16 @@
+/* 6. Rose Executive */
+:root {
+    --primary: #9f1239;
+    --primary-hover: #be123c;
+    --primary-light: #fff1f2;
+    --secondary: #e11d48;
+    --dark: #4c0519;
+    --light: #fff5f6;
+    --white: #ffffff;
+    --border: #fecdd3;
+    --text-main: #881337;
+    --text-muted: #f43f5e;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --warning: #d97706;
+}

@@ -1,0 +1,16 @@
+/* 15. Yellow Gold */
+:root {
+    --primary: #713f12;
+    --primary-hover: #854d0e;
+    --primary-light: #fefce8;
+    --secondary: #ca8a04;
+    --dark: #422006;
+    --light: #fefde8;
+    --white: #ffffff;
+    --border: #fef08a;
+    --text-main: #713f12;
+    --text-muted: #eab308;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --warning: #b45309;
+}

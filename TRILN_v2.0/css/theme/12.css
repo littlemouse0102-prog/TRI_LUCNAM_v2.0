@@ -1,0 +1,16 @@
+/* 12. Lime Fresh */
+:root {
+    --primary: #3f6212;
+    --primary-hover: #4d7c0f;
+    --primary-light: #f7fee7;
+    --secondary: #65a30d;
+    --dark: #1a2e05;
+    --light: #fbffe8;
+    --white: #ffffff;
+    --border: #d9f99d;
+    --text-main: #365314;
+    --text-muted: #84cc16;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --warning: #d97706;
+}
